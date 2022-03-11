@@ -29,11 +29,11 @@ class ModelRecyclerAdapter<M : Model, VM : BaseViewModel>(
     override fun onBindViewHolder(holder: ModelViewHolder<M>, position: Int) {
        with(holder){
            bindData(modelList[position] as M)
-           bindViews(modelList[position] as M, adapterListener)
+           bindViews(modelList[position] as M, adapterListener )
        }
     }
 
-    override fun submitList(list: MutableList<Model>?) {
+    override fun submitList(list: List<Model>?) {
         list?.let{modelList = it}
         super.submitList(list)
     }

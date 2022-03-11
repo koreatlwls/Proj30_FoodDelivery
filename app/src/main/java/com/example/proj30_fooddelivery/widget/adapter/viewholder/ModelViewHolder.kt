@@ -10,14 +10,15 @@ import com.example.proj30_fooddelivery.widget.adapter.listener.AdapterListener
 abstract class ModelViewHolder<M: Model>(
     binding: ViewBinding,
     protected val viewModel: BaseViewModel,
-    protected val resourceProvider: ResourcesProvider
-): RecyclerView.ViewHolder(binding.root) {
+    protected val resourcesProvider: ResourcesProvider
+) : RecyclerView.ViewHolder(binding.root) {
 
     abstract fun reset()
 
-    open fun bindData(model: M){
+    open fun bindData(model: M) {
         reset()
     }
 
     abstract fun bindViews(model: M, adapterListener: AdapterListener)
+
 }

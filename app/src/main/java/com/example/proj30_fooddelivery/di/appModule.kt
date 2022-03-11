@@ -1,7 +1,9 @@
 package com.example.proj30_fooddelivery.di
 
-import com.example.proj30_fooddelivery.data.repository.DefaultRestaurantRepository
-import com.example.proj30_fooddelivery.data.repository.RestaurantRepository
+import com.example.proj30_fooddelivery.data.repository.map.DefaultMapRepository
+import com.example.proj30_fooddelivery.data.repository.map.MapRepository
+import com.example.proj30_fooddelivery.data.repository.restaurant.DefaultRestaurantRepository
+import com.example.proj30_fooddelivery.data.repository.restaurant.RestaurantRepository
 import com.example.proj30_fooddelivery.screen.main.home.HomeViewModel
 import com.example.proj30_fooddelivery.screen.main.home.restaurant.RestaurantCategory
 import com.example.proj30_fooddelivery.screen.main.home.restaurant.RestaurantListViewModel
@@ -15,7 +17,7 @@ import org.koin.dsl.module
 
 val appModule = module {
 
-    viewModel { HomeViewModel() }
+    viewModel { HomeViewModel(get()) }
     viewModel { MyViewModel() }
     viewModel { (restaurantCategory: RestaurantCategory) ->
         RestaurantListViewModel(
@@ -25,10 +27,13 @@ val appModule = module {
     }
 
     single<RestaurantRepository> { DefaultRestaurantRepository(get(), get()) }
+    single<MapRepository> {DefaultMapRepository(get(), get())}
 
     single { provideGsonConvertFactory() }
     single { buildOkHttpClient() }
-    single { provideRetrofit(get(), get()) }
+    single { provideMapRetrofit(get(), get()) }
+
+    single { provideMapApiService(get())}
 
     single<ResourcesProvider> { DefaultResourcesProvider(androidApplication()) }
 

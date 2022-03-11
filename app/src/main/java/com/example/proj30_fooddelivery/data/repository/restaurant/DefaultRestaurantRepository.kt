@@ -1,4 +1,4 @@
-package com.example.proj30_fooddelivery.data.repository
+package com.example.proj30_fooddelivery.data.repository.restaurant
 
 import com.example.proj30_fooddelivery.data.entity.RestaurantEntity
 import com.example.proj30_fooddelivery.screen.main.home.restaurant.RestaurantCategory
@@ -9,7 +9,7 @@ import kotlinx.coroutines.withContext
 class DefaultRestaurantRepository(
     private val resourcesProvider: ResourcesProvider,
     private val ioDispatcher: CoroutineDispatcher
-) : RestaurantRepository{
+) : RestaurantRepository {
 
     override suspend fun getList(restaurantCategory: RestaurantCategory): List<RestaurantEntity> =
         withContext(ioDispatcher){

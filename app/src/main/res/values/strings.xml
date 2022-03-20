@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proj30_FoodDelivery</string>
+    <string name="app_name">FoodDelivery</string>
     <string name="one_serving">1인분</string>
 
     <string name="loading">로딩 중…</string>
@@ -69,5 +69,4 @@
 
     <!-- Image Preview -->
     <string name="images_page">(%d/%d)</string>
-    <string name="location_not_found">위치정보없음</string>
 </resources>

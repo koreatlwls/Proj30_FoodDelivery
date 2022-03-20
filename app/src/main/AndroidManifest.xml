@@ -6,6 +6,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <application
         android:name=".FoodDeliveryApplication"
         android:allowBackup="true"
@@ -14,9 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Proj30_FoodDelivery">
+        android:theme="@style/Theme.Proj30FoodDelivery">
         <activity
-            android:name=".screen.main.MainActivity"
+            android:name=".screen.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +29,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".screen.mylocation.MyLocationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".screen.home.restaurant.detail.RestaurantDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".screen.order.OrderMenuListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".screen.review.camera.preview.ImagePreviewListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".screen.review.camera.CameraActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".screen.review.gallery.GalleryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".screen.review.AddRestaurantReviewActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map"/>
     </application>
 
 </manifest>

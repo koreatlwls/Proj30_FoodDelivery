@@ -1,7 +1,5 @@
 package com.example.proj30_fooddelivery.data.response.address
 
-import com.example.proj30_fooddelivery.data.entity.LocationLatLngEntity
-import com.example.proj30_fooddelivery.data.entity.MapSearchInfoEntity
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
@@ -54,11 +52,4 @@ data class AddressInfo(
     @SerializedName("roadCode")
     @Expose
     val roadCode: String?
-){
-
-    fun toSearchInfoEntity(locationLatLngEntity: LocationLatLngEntity) = MapSearchInfoEntity(
-        fullAddress = fullAddress ?: "주소 정보 없음",
-        name = buildingName ?: "빌딩 정보 없음",
-        locationLatLng = locationLatLngEntity
-    )
-}
+)

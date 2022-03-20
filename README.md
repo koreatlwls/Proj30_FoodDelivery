@@ -1,5 +1,56 @@
-# Proj30_FoodDelivery
-Android Clone Coding Project #30 FoodDelivery
+# Android Clone Coding Project #30 FoodDelivery
+메인화면 > 홈탭(식당 리스트)
+</br>
+위치 변경 화면
+</br>
+정렬 기능 > 별점 높은 순
+</br>
+식당 상세화면
+</br>
+찜 버튼 클릭
+</br>
+스크롤 시 툴바 제목 애니메이션
+</br>
+식당 상세화면 > 전화
+</br>
+찜 탭
+</br>
+식당 상세화면 > 공유
+</br>
+식당 상세화면 > 메뉴리스트
+</br>
+식당 상세화면 > 장바구니 추가
+</br>
+장바구니 추가 > 홈화면에 반영 된 장바구니 버튼
+</br>
+다른 식당 상세화면 > 장바구니 담을 때 기존 비우기
+</br>
+장바구니 버튼 클릭 > 주문 확인 리스트
+</br>
+주문 취소 > 장바구니 비우고 화면 종료
+</br>
+장바구니 담기 > 로그인 되어 있지 않으면 프로필 탭 이동
+</br>
+My탭 - 로그인 필요
+</br>
+My탭 - 프로필 정보 불러오기
+</br>
+리뷰 글 쓰기 화면
+</br>
+사진 첨부 선택
+</br>
+사진 첨부 선택 > 갤러리
+</br>
+사진 첨부 > 카메라 사진 촬영
+</br>
+카메라 > 사진 미리보기
+</br>
+리뷰 글 쓰기 화면 - 사진 첨부 후
+</br>
+리뷰 글 쓰기 화면 - 글 업로드 중
+</br>
+식당 상세 > 리뷰 리스트 화면
+</br>
 
 ## 결과 화면
 
@@ -38,3 +89,17 @@ Android Clone Coding Project #30 FoodDelivery
 | 25. 리뷰 글 쓰기 화면 - 글 업로드 중                         | 26. 식당 상세 > 리뷰 리스트 화면                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |<img src="./screenshot/25.png"/> |<img src="./screenshot/26.png"/> |
+
+
+# 배운 내용 정리
+- MVVM
+- Clean Architecture
+- TMAP POI
+- Google Map
+- Mock Data
+- Retrofit
+- Koin
+- Room
+- Firebase
+- Coroutines
+- CameraX
